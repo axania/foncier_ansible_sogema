@@ -1,0 +1,15 @@
+---
+
+full_hostname: dev-fon-worker01.az.sogema.local
+
+
+# Feature flags - stuff we want to be present
+jenkins_slave_node: True
+node_installed: True #we build in the VM too
+is_maven_server: True
+
+available_docker_services:
+  - foncier_ui 
+  - foncier_api
+  - postgres
+  - datadog
