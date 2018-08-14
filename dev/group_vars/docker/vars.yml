@@ -18,6 +18,8 @@ foncier_api_image_version: dev
 is_swarm_mode_enabled: False
 is_datadog_on_docker: True
 is_docker_prospector_enabled: True
+is_drools_enabled: True
+
 #start - linked to docker compose vars
 db_host: "postgres"
 db_port: 5432
