@@ -16,5 +16,6 @@ available_docker_services:
   - postgres
   - datadog
   - sonarqube
+  - drools
 
 
