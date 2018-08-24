@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a env=("dev")
+declare -a env=("dev" "qa")
 declare -a group=("all" "docker" )
 
 ## now loop through the above array
