@@ -1,6 +1,6 @@
 ---
 
-full_hostname: dev-fon-worker01.az.sogema.local
+full_hostname: qa-fon-worker01.az.sogema.local
 
 
 # Feature flags - stuff we want to be present

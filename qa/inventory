@@ -1,5 +1,5 @@
 ---
-worker01 ansible_ssh_host=dev-fon-worker01.az.sogema.local
+worker01 ansible_ssh_host=qa-fon-worker01.az.sogema.local
 
 
 [docker]
