@@ -29,6 +29,15 @@ db_user: "{{ vault_db_user }}"
 db_pass: "{{ vault_db_pass }}"
 db_name: ladm
 
+#edms - environment
+edms_user: "{{ vault_edms_user }}"
+edms_password: "{{ vault_edms_password }}"
+edms_domain: "stisystems.sharepoint.com"
+edms_source: "SHAREPOINT"
+edms_temp_file_directory: "tempFiles"
+edms_sharepoint_site: "/sites/dev.foncier"
+edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
+
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
       ip: 127.0.0.1
