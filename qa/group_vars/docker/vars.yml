@@ -30,7 +30,7 @@ db_pass: "{{ vault_db_pass }}"
 db_name: ladm
 
 #edms - environment
-edms_user: "{{ vault_edms_user }}"
+edms_user: foncier@sogematech.com
 edms_password: "{{ vault_edms_password }}"
 edms_domain: "stisystems.sharepoint.com"
 edms_source: "SHAREPOINT"
