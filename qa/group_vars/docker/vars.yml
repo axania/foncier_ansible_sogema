@@ -29,6 +29,9 @@ db_user: "{{ vault_db_user }}"
 db_pass: "{{ vault_db_pass }}"
 db_name: ladm
 
+#camunda 
+camunda_enginerest_url: http://foncier_ui:4200/workflowApi/engine-rest/
+
 #edms - environment
 edms_user: foncier@sogematech.com
 edms_password: "{{ vault_edms_password }}"
