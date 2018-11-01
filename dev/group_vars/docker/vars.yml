@@ -29,6 +29,9 @@ db_user: "{{ vault_db_user }}"
 db_pass: "{{ vault_db_pass }}"
 db_name: ladm
 
+#camunda 
+test_camunda_enginerest_url: http://foncier_ui:4200/workflowApi/engine-rest/
+
 #edms - environment
 edms_user: "foncier@sogematech.com"
 edms_password: "{{ vault_edms_password }}"
@@ -37,6 +40,16 @@ edms_source: "SHAREPOINT"
 edms_temp_file_directory: "tempFiles"
 edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
+
+#mail - environment
+mail_host: "smtp.gmail.com"
+mail_port: "587"
+mail_username: "sti.foncier@gmail.com"
+mail_password: "{{ vault_mail_password }}"
+mail_protocol: "smtp"
+mail_defaultencoding: "UTF-8"
+mail_smtp_auth_enabled: "true"
+mail_tls_enabled: "true"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
