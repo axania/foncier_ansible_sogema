@@ -48,8 +48,8 @@ mail_username: "sti.foncier@gmail.com"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
-mail_smtp_auth_enabled: "true"
-mail_tls_enabled: "true"
+mail_smtp_auth_enabled: 'true'
+mail_tls_enabled: 'true'
 
 #keycloak - environment
 keycloak_auth_server_url: "http://dev-keycloak01.az.sogema.local:8080"
