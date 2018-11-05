@@ -20,6 +20,8 @@ is_swarm_mode_enabled: False
 is_datadog_on_docker: True
 is_docker_prospector_enabled: True
 is_drools_enabled: True
+is_keycloak_enabled: True
+
 
 #start - linked to docker compose vars
 db_host: "postgres"
@@ -49,14 +51,20 @@ mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
-mail_tls_enabled: 'true'
+mail_tls_enabled: "true"
 
 #keycloak - environment
 keycloak_auth_server_url: "http://dev-keycloak01.az.sogema.local:8080"
-keycloak_realm: "foncier"
+keycloak_realm: "DEV Foncier"
 keycloak_ssl_required: "external"
+
+#keycloak camunda integration
+keycloak_wf_client: "foncier-camunda"
+keycloak_wf_realm_public_key: "{{ vault_keycloak_wf_realm_public_key }}" 
+
+#keycloak foncier api integration
 keycloak_api_client: "foncier-api"
-keycloak_api_client_secret: "95ffe8b6-c466-4f08-ac07-bc938f27115a"
+keycloak_api_client_secret: "{{ vault_keycloak_api_client_secret }}"
 keycloak_api_client_role: "user"
 
 etc_save_hosts:
