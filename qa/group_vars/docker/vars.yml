@@ -66,6 +66,9 @@ keycloak_api_client: "foncier-api"
 keycloak_api_client_secret: "{{ vault_keycloak_api_client_secret }}"
 keycloak_api_client_role: "user"
 
+#keycloak foncier ui integration
+keycloak_ui_client: "foncier-ui"
+
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
       ip: 127.0.0.1
