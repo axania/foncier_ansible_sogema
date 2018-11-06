@@ -54,7 +54,7 @@ mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
 
 #keycloak - environment
-keycloak_auth_server_url: "http://dev-keycloak01.az.sogema.local:8080"
+keycloak_auth_server_url: "http://dev-keycloak01.az.sogema.local:8080/auth"
 keycloak_realm: "DEV Foncier"
 keycloak_ssl_required: "external"
 
