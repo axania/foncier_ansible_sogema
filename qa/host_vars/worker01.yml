@@ -14,7 +14,7 @@ available_docker_services:
   - foncier_wf
   - foncier_api
   - datadog
-  - drools
+  - foncier_rules_api
   - postgres
 
 
