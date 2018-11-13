@@ -70,9 +70,9 @@ keycloak_api_client_role: "user"
 #keycloak foncier ui integration
 keycloak_ui_client: "foncier-ui"
 
-#tax calculation
-tax_calc_user: "user"
-tax_calc_pass: "password"
+#foncier rules api
+drools_workbench_user: "admin"
+drools_workbench_pass: "admin"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
