@@ -40,7 +40,7 @@ edms_password: "{{ vault_edms_password }}"
 edms_domain: "stisystems.sharepoint.com"
 edms_source: "SHAREPOINT"
 edms_temp_file_directory: "src/main/resources/tempFiles"
-edms_server_base_folder: "/sites/dev.foncier/Documents partages/testFolder"
+edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocumentsQA"
 edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocumentsQA"
 
