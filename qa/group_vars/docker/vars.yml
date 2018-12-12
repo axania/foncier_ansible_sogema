@@ -39,10 +39,14 @@ edms_user: foncier@sogematech.com
 edms_password: "{{ vault_edms_password }}"
 edms_domain: "stisystems.sharepoint.com"
 edms_source: "SHAREPOINT"
+edms_enabled: "true"
 edms_temp_file_directory: "src/main/resources/tempFiles"
 edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocumentsQA"
 edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocumentsQA"
+dms_alfresco_site: "foncier"
+edms_alfresco_folder: "/foncierEdmsDocumentsLocalDev"
+edms_alfresco_container: "documentLibrary"
 
 #mail - environment
 mail_host: "smtp.gmail.com"
