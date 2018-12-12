@@ -45,7 +45,7 @@ edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocum
 edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocumentsQA"
 edms_alfresco_site: "foncier"
-edms_alfresco_folder: "/foncierEdmsDocumentsLocalDev"
+edms_alfresco_folder: "/foncierEdmsDocumentsQA"
 edms_alfresco_container: "documentLibrary"
 
 #mail - environment
