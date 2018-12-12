@@ -39,7 +39,7 @@ edms_user: foncier@sogematech.com
 edms_password: "{{ vault_edms_password }}"
 edms_domain: "stisystems.sharepoint.com"
 edms_source: "SHAREPOINT"
-edms_enabled: "true"
+edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
 edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocumentsQA"
 edms_sharepoint_site: "/sites/dev.foncier"
