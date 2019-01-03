@@ -32,7 +32,7 @@ db_pass: "{{ vault_db_pass }}"
 db_name: ladm
 
 #camunda 
-camunda_enginerest_url: http://foncier_ui:4200/workflowApi/engine-rest/
+camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
 
 #edms - environment
 edms_user: "foncier@sogematech.com"
@@ -58,7 +58,7 @@ mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
 
-rules_base_url: "http://foncier_rules_api:8080/foncier-rules-api/api/"
+rules_base_url: "http://foncier-rules-api:8080/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
 rules_default_tran_version: "1"
 rules_endpoints_task: "transaction/type/{tranType}/version/{tranVer}/validate/task"
