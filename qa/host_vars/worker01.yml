@@ -10,11 +10,11 @@ is_maven_server: True
 is_sonar_enabled: True
 
 available_docker_services:
-  - foncier_ui 
-  - foncier_wf
-  - foncier_api
+  - foncier-ui 
+  - foncier-wf
+  - foncier-api
   - datadog
-  - foncier_rules_api
+  - foncier-rules-api
   - postgres
 
 
