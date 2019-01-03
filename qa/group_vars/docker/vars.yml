@@ -79,7 +79,7 @@ keycloak_wf_realm_public_key: "{{ vault_keycloak_wf_realm_public_key }}"
 #keycloak foncier api integration
 keycloak_api_client: "foncier-api"
 keycloak_api_client_secret: "{{ vault_keycloak_api_client_secret }}"
-keycloak_api_client_role: "user"
+keycloak_api_client_role: "all-api-access"
 
 #keycloak foncier ui integration
 keycloak_ui_client: "foncier-ui"
