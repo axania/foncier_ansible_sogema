@@ -88,6 +88,9 @@ keycloak_ui_client: "foncier-ui"
 drools_workbench_user: "admin"
 drools_workbench_pass: "admin"
 
+#mali
+mali_folios_per_volume: "200"
+
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
       ip: 127.0.0.1
