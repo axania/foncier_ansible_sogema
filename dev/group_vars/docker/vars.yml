@@ -83,6 +83,9 @@ keycloak_api_client_role: "all-api-access"
 #keycloak foncier ui integration
 keycloak_ui_client: "foncier-ui"
 
+#mali
+mali_folios_per_volume: "200"
+
 #foncier rules api
 drools_workbench_user: "admin"
 drools_workbench_pass: "admin"
