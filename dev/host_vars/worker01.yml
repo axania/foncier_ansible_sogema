@@ -7,7 +7,7 @@ full_hostname: dev-fon-worker01.az.sogema.local
 jenkins_slave_node: True
 node_installed: True #we build in the VM too
 is_maven_server: True
-is_sonar_enabled: True
+is_sonar_enabled: False
 
 available_docker_services:
   - foncier-ui 
@@ -16,5 +16,8 @@ available_docker_services:
   - datadog
   - foncier-rules-api
   - postgres
-
+  - alfresco
+  - share-alfresco
+  - postgres-alfresco
+  - solr6-alfresco
 
