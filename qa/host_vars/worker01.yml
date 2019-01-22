@@ -16,5 +16,8 @@ available_docker_services:
   - datadog
   - foncier-rules-api
   - postgres
-
+  - alfresco
+  - share-alfresco
+  - postgres-alfresco
+  - solr6-alfresco
 
