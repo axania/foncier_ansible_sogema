@@ -1,0 +1,22 @@
+---
+
+worker01 ansible_ssh_host=pp-ml-fon-worker01.az.sogema.local
+worker02 ansible_ssh_host=pp-ml-fon-worker02.az.sogema.local
+worker03 ansible_ssh_host=pp-ml-fon-worker03.az.sogema.local
+
+[docker]
+worker01
+worker02
+worker03
+
+[jenkins]
+worker01
+
+[datacenter:children]
+docker
+jenkins
+
+[datacenter:vars]
+ansible_ssh_user={{vault_ansible_ssh_user}}
+ansible_ssh_pass={{vault_ansible_ssh_pass}}
+
