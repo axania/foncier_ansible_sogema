@@ -7,6 +7,7 @@ ansible_ssh_pass: "{{ vault_ansible_ssh_pass }}"
 #from Datadog role variables
 dd_enabled: yes
 datadog_installed: True
+dd_process_agent_enabled: True
 dd_key: "{{ vault_dd_key }}"
 dd_process_agent_enabled: "true"
 
