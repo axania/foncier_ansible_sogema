@@ -9,7 +9,6 @@ dd_enabled: yes
 datadog_installed: True
 dd_process_agent_enabled: True
 dd_key: "{{ vault_dd_key }}"
-dd_process_agent_enabled: "true"
 
 #Host Timezone 
 timezone: America/Montreal
