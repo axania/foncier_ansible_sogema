@@ -41,7 +41,7 @@ edms_domain: "dev-fon-worker03.az.sogema.local:8380"
 edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
-edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocuments"
+edms_server_base_folder: "/sites/foncier/documentLibrary/foncierEdmsDocuments"
 edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
 edms_alfresco_site: "foncier"
