@@ -12,7 +12,7 @@ is_sonar_enabled: True
 available_docker_services:
   - datadog
   - alfresco
-  - share-alfresco
-  - postgres-alfresco
-  - solr6-alfresco
+  - alfresco-db
+  - alfresco-share
+  - alfresco-solr6
 
