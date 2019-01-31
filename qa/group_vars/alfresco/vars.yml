@@ -17,7 +17,7 @@ is_docker_prospector_enabled: True
 pull_images: yes
 
 
-#Alfresco Vars
+#Alfresco Vars - These vars create and pre poluate
 edms_host: http://qa-fon-worker03.az.sogema.local:8380
 
 share_host: qa-fon-worker03.az.sogema.local

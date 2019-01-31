@@ -34,10 +34,10 @@ db_name: ladm
 #camunda 
 camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
 
-#edms - environment
+#edms - environment - here you are using the EDMS (Alfresco or Sharepoint)
 edms_user: foncier@sogematech.com
 edms_password: "{{ vault_edms_password }}"
-edms_domain: "qa-fon-worker01.az.sogema.local"
+edms_domain: "qa-fon-worker03.az.sogema.local:8380"
 edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
