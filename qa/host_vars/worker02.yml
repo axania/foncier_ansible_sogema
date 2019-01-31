@@ -1,6 +1,6 @@
 ---
 
-full_hostname: qa-fon-worker01.az.sogema.local
+full_hostname: qa-fon-worker02.az.sogema.local
 
 
 # Feature flags - stuff we want to be present
@@ -10,11 +10,6 @@ is_maven_server: True
 is_sonar_enabled: True
 
 available_docker_services:
-  - foncier-ui 
-  - foncier-wf
-  - foncier-api
-  - foncier-db
   - datadog
   - foncier-rules-api
-
 

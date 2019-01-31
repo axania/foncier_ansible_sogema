@@ -24,7 +24,7 @@ is_foncier_rules_api_enabled: True
 is_keycloak_enabled: True
 
 #start - linked to docker compose vars
-db_host: "postgres"
+db_host: "qa-fon-worker01.az.sogema.local"
 db_port: 5432
 
 db_user: "{{ vault_db_user }}"
@@ -37,11 +37,11 @@ camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
 #edms - environment
 edms_user: foncier@sogematech.com
 edms_password: "{{ vault_edms_password }}"
-edms_domain: "stisystems.sharepoint.com"
-edms_source: "SHAREPOINT"
+edms_domain: "qa-fon-worker01.az.sogema.local"
+edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
-edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocumentsQA"
+edms_server_base_folder: "/sites/foncier/documentLibrary/foncierEdmsDocumentsQA"
 edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocumentsQA"
 edms_alfresco_site: "foncier"
