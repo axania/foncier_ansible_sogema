@@ -4,18 +4,19 @@
 ### What is this repository for? ###
 
 * Contains the inventory and variables of Sogema Tech. controlled environments. 
-* Meant to be used along with [foncier_ansible](https://bitbucket.org/ucis/foncier_ansible) project.
+* Meant to be used along with [foncier__ansible](https://bitbucket.org/ucis/foncier_ansible/) project.
 
 
 ### Contents ###
 
 * DEV
 * QA
+* PP-ML
 
 ### How do I get set up? ###
 
 1. Checkout this repository.
-2. Checkout [foncier_ansible](https://bitbucket.org/ucis/foncier_ansible) repo (in a separate folder).
+2. Checkout [foncier__ansible](https://bitbucket.org/ucis/foncier_ansible/) repo (in a separate folder).
 
 Then
 
@@ -32,4 +33,5 @@ $ ansible-playbook -i <this-repo>/<env>/inventory ≤playbook≥.yml --vault-pas
 
 ### Who do I talk to? ###
 
+* Benjamin Chambon benjamin.chambon@sogematech.com
 * Marcos Garcia marcos.garcia@sogematech.com
