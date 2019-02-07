@@ -51,12 +51,14 @@ edms_alfresco_container: "documentLibrary"
 #mail - environment
 mail_host: "smtp.gmail.com"
 mail_port: "587"
+mail_from: "sti.foncier@gmail.com"
 mail_username: "sti.foncier@gmail.com"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
+mail_debug: "true"
 
 rules_base_url: "http://dev-fon-worker02.az.sogema.local:8082/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"

@@ -24,7 +24,7 @@ is_foncier_rules_api_enabled: True
 is_keycloak_enabled: True
 
 #start - linked to docker compose vars
-db_host: "postgres"
+db_host: "qa-fon-worker01.az.sogema.local"
 db_port: 5432
 
 db_user: "{{ vault_db_user }}"
@@ -34,14 +34,14 @@ db_name: ladm
 #camunda 
 camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
 
-#edms - environment
+#edms - environment - here you are using the EDMS (Alfresco or Sharepoint)
 edms_user: foncier@sogematech.com
 edms_password: "{{ vault_edms_password }}"
-edms_domain: "stisystems.sharepoint.com"
-edms_source: "SHAREPOINT"
+edms_domain: "qa-fon-worker03.az.sogema.local:8380"
+edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
-edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocumentsQA"
+edms_server_base_folder: "/sites/foncier/documentLibrary/foncierEdmsDocumentsQA"
 edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocumentsQA"
 edms_alfresco_site: "foncier"
@@ -49,14 +49,16 @@ edms_alfresco_folder: "/foncierEdmsDocumentsQA"
 edms_alfresco_container: "documentLibrary"
 
 #mail - environment
-mail_host: "smtp.gmail.com"
+mail_host: "smtp.sendgrid.net"
 mail_port: "587"
-mail_username: "sti.foncier@gmail.com"
+mail_from: "sitfi@sitfi.dndc.gouv.ml"
+mail_username: "apikey"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
-mail_tls_enabled: 'true'
+mail_tls_enabled: "true"
+mail_debug: "true"
 
 rules_base_url: "http://foncier-rules-api:8080/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
