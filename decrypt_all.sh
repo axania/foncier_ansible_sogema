@@ -1,7 +1,7 @@
 #!/bin/bash
 
 declare -a env=("dev" "qa" "pp-ml")
-declare -a group=("all" "docker" )
+declare -a group=("all" "docker" "haproxy")
 
 ## now loop through the above array
 for i in "${env[@]}"

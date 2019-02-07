@@ -1,5 +1,6 @@
 ---
 
+lb01 ansible_ssh_host=pp-ml-fon-lb01.az.sogema.local
 worker01 ansible_ssh_host=pp-ml-fon-worker01.az.sogema.local
 worker02 ansible_ssh_host=pp-ml-fon-worker02.az.sogema.local
 worker03 ansible_ssh_host=pp-ml-fon-worker03.az.sogema.local
@@ -8,6 +9,9 @@ worker03 ansible_ssh_host=pp-ml-fon-worker03.az.sogema.local
 worker01
 worker02
 worker03
+
+[haproxy]
+lb01
 
 [jenkins]
 worker01
