@@ -1,0 +1,74 @@
+---
+
+#Docker Installed version
+docker_compose_version: 1.21.2
+docker_ce_version: 18.03.1~ce-0~ubuntu
+
+docker_registry: "{{ vault_docker_registry }}"
+docker_user: "{{ vault_docker_user }}"
+docker_pwd: "{{ vault_docker_pwd }}"
+docker_email: "jenkins@sti.systems"
+
+#Docker Containers Deployed
+pull_images: yes #always do a docker pull > since this is dev we want to ge the latest :dev tag ;)
+foncier_ui_image_version: dev
+foncier_api_image_version: latest
+foncier_wf_image_version: "7.8.13-ee"
+foncier_rules_api_image_version: latest
+
+#Feature Flags
+is_swarm_mode_enabled: False
+is_datadog_on_docker: True
+is_docker_prospector_enabled: True
+is_foncier_rules_api_enabled: False
+is_keycloak_enabled: False
+
+etc_save_hosts:
+    - name: "{{ ansible_ssh_host }}"
+      ip: 127.0.0.1
+
+# /etc/resolv.conf values
+dns_resolv_searchpath:
+  - 'az.sogema.local'
+  - 'sogema.local' 
+  - 'sogema.ca'
+  - 'reddog.microsoft.com'
+
+dns_server_list:
+  - 192.168.0.70
+  - 192.168.1.236
+  - 8.8.8.8
+  - 8.8.4.4
+  - 208.67.222.222
+
+#Docker logs filebeat vars
+docker_log_path: "/var/lib/docker/containers/*/*.log"
+docker_container_log_name: "fon"
+
+#System logs filebeat vars:
+system_log_path: "/var/log/*.log"
+
+
+###HAProxy
+haproxy_frontends:
+  http_front:
+  - bind *:80
+  - acl auth_ok http_auth(users)
+  - http-request auth unless auth_ok  
+  - default_backend haproxy_backends
+  - use_backend haproxy_backends
+haproxy_backends:
+  http_back:
+  - balance roundrobin
+  - server pp-ml-fon-worker01.az.sogema.local:4200 check 
+  #- server dev-keycloak01.az.sogema.local:8080 check 
+
+haproxy_backend_servers:
+  - name: foncierui
+    address: pp-ml-fon-worker01.az.sogema.local:4200
+  #- name: keycloak    
+  #  address: dev-keycloak01.az.sogema.local:8080
+
+haproxy_user: admin
+haproxy_pass: admin
+  
