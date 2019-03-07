@@ -94,6 +94,9 @@ mali_folios_per_volume: "200"
 drools_workbench_user: "admin"
 drools_workbench_pass: "admin"
 
+#com.sogematech log level
+logs_level: "DEBUG"
+
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
       ip: 127.0.0.1
