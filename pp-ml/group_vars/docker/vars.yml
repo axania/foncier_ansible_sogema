@@ -86,6 +86,9 @@ keycloak_ui_client: "foncier-ui"
 #mali
 mali_folios_per_volume: "200"
 
+#com.sogematech log level
+logs_level: "INFO"
+
 #foncier rules api
 drools_workbench_user: "admin"
 drools_workbench_pass: "admin"
