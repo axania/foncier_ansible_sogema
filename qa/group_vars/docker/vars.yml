@@ -42,6 +42,7 @@ edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
 edms_server_base_folder: "/sites/foncier/documentLibrary/foncierEdmsDocumentsQA"
+edms_microsoft_sts_url: "https://login.microsoftonline.com/extSTS.srf" 
 edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocumentsQA"
 edms_alfresco_site: "foncier"
