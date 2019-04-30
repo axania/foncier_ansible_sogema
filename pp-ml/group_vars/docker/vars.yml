@@ -37,30 +37,29 @@ camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
 #edms - environment
 edms_user: "foncier@sogematech.com"
 edms_password: "{{ vault_edms_password }}"
-edms_domain: "pp-ml-fon-worker03.az.sogema.local:8380"
-edms_source: "ALFRESCO"
+edms_domain: "stisystems.sharepoint.com"
+edms_source: "SHAREPOINT"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
-edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocumentsPPML"
+edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocuments"
 edms_sharepoint_site: "/sites/dev.foncier"
-edms_sharepoint_folder: "/Documents partages/foncierEdmsDocumentsPPML"
+edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
+edms_microsoft_sts_url: "https://login.microsoftonline.com/extSTS.srf"
 edms_alfresco_site: "foncier"
-edms_alfresco_folder: "/foncierEdmsDocumentsPPML"
+edms_alfresco_folder: "/foncierEdmsDocuments"
 edms_alfresco_container: "documentLibrary"
 
 #mail - environment
-mail_host: "smtp.sendgrid.net"
+mail_host: "smtp.gmail.com"
 mail_port: "587"
-mail_from: "sitfi@sitfi.dndc.gouv.ml"
-mail_username: "apikey"
+mail_username: "sti.foncier@gmail.com"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
-mail_debug: "true"
 
-rules_base_url: "http://foncier-rules-api:8080/foncier-rules-api/api/"
+rules_base_url: "http://pp-ml-fon-worker02.az.sogema.local:8082/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
 rules_default_tran_version: "1"
 rules_endpoints_task: "transaction/type/{tranType}/version/{tranVer}/validate/task"
@@ -87,6 +86,9 @@ keycloak_ui_client: "foncier-ui"
 
 #mali
 mali_folios_per_volume: "200"
+
+#com.sogematech log level
+logs_level: "INFO"
 
 #foncier rules api
 drools_workbench_user: "admin"
