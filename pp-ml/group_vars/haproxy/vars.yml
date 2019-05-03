@@ -50,25 +50,10 @@ system_log_path: "/var/log/*.log"
 
 
 ###HAProxy
-haproxy_frontends:
-  http_front:
-  - bind *:80
-  - acl auth_ok http_auth(users)
-  - http-request auth unless auth_ok  
-  - default_backend haproxy_backends
-  - use_backend haproxy_backends
-haproxy_backends:
-  http_back:
-  - balance roundrobin
-  - server pp-ml-fon-worker01.az.sogema.local:4200 check 
-  #- server dev-keycloak01.az.sogema.local:8080 check 
+pem_artifact: "pp-ml-foncier.sogematech.com.pem"
 
-haproxy_backend_servers:
-  - name: foncierui
-    address: pp-ml-fon-worker01.az.sogema.local:4200
-  #- name: keycloak    
-  #  address: dev-keycloak01.az.sogema.local:8080
+keycloak_host: "dev-keycloak01.az.sogema.local"
+keycloak_port: "8080"
 
-haproxy_user: admin
-haproxy_pass: admin
-  
+ui_host: "pp-ml-fon-worker01.az.sogema.local"
+ui_port: "4200"
