@@ -24,7 +24,7 @@ is_foncier_rules_api_enabled: True
 is_keycloak_enabled: True
 
 #start - linked to docker compose vars
-db_host: "pp-ml-fon-worker01.az.sogema.local"
+db_host: "pp-ml-fon-data01.az.sogema.local"
 db_port: 5432
 
 db_user: "{{ vault_db_user }}"
@@ -52,12 +52,14 @@ edms_alfresco_container: "documentLibrary"
 #mail - environment
 mail_host: "smtp.gmail.com"
 mail_port: "587"
+mail_from: "pp-ml@sitfit.sogema"
 mail_username: "sti.foncier@gmail.com"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
 mail_smtp_auth_enabled: 'true'
 mail_tls_enabled: "true"
+mail_debug: "false"
 
 rules_base_url: "http://pp-ml-fon-worker02.az.sogema.local:8082/foncier-rules-api/api/"
 rules_default_tran_type: "tran1"
@@ -68,7 +70,7 @@ rules_endpoints_party_group: "transaction/type/{tranType}/version/{tranVer}/vali
 rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/validate/partyMember"
 
 #keycloak - environment
-keycloak_auth_server_url: "http://dev-keycloak01.az.sogema.local:8080/auth"
+keycloak_auth_server_url: "https://pp-ml-foncier.sogematech.com/auth"
 keycloak_realm: "PP-ML Foncier"
 keycloak_ssl_required: "external"
 
@@ -80,6 +82,8 @@ keycloak_wf_realm_public_key: "{{ vault_keycloak_wf_realm_public_key }}"
 keycloak_api_client: "foncier-api"
 keycloak_api_client_secret: "{{ vault_keycloak_api_client_secret }}"
 keycloak_api_client_role: "all-api-access"
+keycloak_api_username: "{{ vault_keycloak_api_username }}"
+keycloak_api_password: "{{ vault_keycloak_api_password }}"
 
 #keycloak foncier ui integration
 keycloak_ui_client: "foncier-ui"
@@ -87,12 +91,12 @@ keycloak_ui_client: "foncier-ui"
 #mali
 mali_folios_per_volume: "200"
 
-#com.sogematech log level
-logs_level: "INFO"
-
 #foncier rules api
 drools_workbench_user: "admin"
 drools_workbench_pass: "admin"
+
+#com.sogematech log level
+logs_level: "INFO"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"

@@ -4,10 +4,18 @@ lb01 ansible_ssh_host=pp-ml-fon-lb01.az.sogema.local
 worker01 ansible_ssh_host=pp-ml-fon-worker01.az.sogema.local
 worker02 ansible_ssh_host=pp-ml-fon-worker02.az.sogema.local
 worker03 ansible_ssh_host=pp-ml-fon-worker03.az.sogema.local
+data01 ansible_ssh_host=pp-ml-fon-data01.az.sogema.local
+#report01 ansible_ssh_host=
+#report02 ansible_ssh_host=
 
 [docker]
 worker01
 worker02
+data01
+#report01
+#report02
+
+[alfresco]
 worker03
 
 [haproxy]
@@ -19,6 +27,8 @@ worker01
 [datacenter:children]
 docker
 jenkins
+alfresco
+haproxy
 
 [datacenter:vars]
 ansible_ssh_user={{vault_ansible_ssh_user}}

@@ -1,6 +1,6 @@
 ---
 
-full_hostname: pp-ml-fon-worker03.az.sogema.local
+full_hostname: pp-ml-fon-lb01.az.sogema.local
 
 # Feature flags - stuff we want to be present
 jenkins_slave_node: False
@@ -9,8 +9,5 @@ is_maven_server: False
 is_sonar_enabled: False
 
 available_docker_services:
-  - alfresco
-  - alfresco-share
-  - alfresco-db
-  - alfresco-solr6
+  - haproxy
   - datadog
