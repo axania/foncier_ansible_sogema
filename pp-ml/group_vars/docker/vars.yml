@@ -12,9 +12,9 @@ docker_email: "jenkins@sti.systems"
 #Docker Containers Deployed
 pull_images: yes #always do a docker pull > since this is dev we want to ge the latest :dev tag ;)
 foncier_ui_image_version: dev
-foncier_api_image_version: latest
+foncier_api_image_version: dev
 foncier_wf_image_version: "7.8.13-ee"
-foncier_rules_api_image_version: latest
+foncier_rules_api_image_version: dev
 
 #Feature Flags
 is_swarm_mode_enabled: False
@@ -37,8 +37,8 @@ camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
 #edms - environment
 edms_user: "foncier@sogematech.com"
 edms_password: "{{ vault_edms_password }}"
-edms_domain: "stisystems.sharepoint.com"
-edms_source: "SHAREPOINT"
+edms_domain: "pp-ml-fon-worker03.az.sogema.local:8380"
+edms_source: "ALFRESCO"
 edms_enabled: 'true'
 edms_temp_file_directory: "src/main/resources/tempFiles"
 edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocuments"
@@ -46,7 +46,7 @@ edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
 edms_microsoft_sts_url: "https://login.microsoftonline.com/extSTS.srf"
 edms_alfresco_site: "foncier"
-edms_alfresco_folder: "/foncierEdmsDocuments"
+edms_alfresco_folder: "/foncierEdmsDocumentsPPML"
 edms_alfresco_container: "documentLibrary"
 
 #mail - environment
