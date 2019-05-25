@@ -2,7 +2,7 @@
 
 #Docker Installed version
 docker_compose_version: 1.21.2
-docker_ce_version: 18.03.1~ce-0~ubuntu
+docker_ce_version: 18.06.3~ce~3-0~ubuntu
 
 docker_registry: "{{ vault_docker_registry }}"
 docker_user: "{{ vault_docker_user }}"
@@ -18,6 +18,8 @@ pull_images: yes
 
 
 #Alfresco Vars - These vars create and pre poluate
+edms_csrf_filter_origin: https://pp-ml-foncier.sogematech.com
+
 edms_host: http://pp-ml-fon-worker03.az.sogema.local:8380
 
 share_host: pp-ml-fon-worker03.az.sogema.local
@@ -36,6 +38,15 @@ edms_site_id: foncier
 edms_site_title: PP-ML Foncier
 edms_site_description: "Documents coming from PP-ML Sogema environment"
 edms_alfresco_folder: foncierEdmsDocumentsPPML
+
+alfresco_xms: 6g
+alfresco_xmx: 12g
+
+share_xms: 512m
+share_xmx: 1g
+
+solr_xms: 1g
+solr_xmx: 2g
 
 
 etc_save_hosts:

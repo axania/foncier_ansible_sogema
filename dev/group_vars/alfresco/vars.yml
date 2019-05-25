@@ -38,6 +38,15 @@ edms_site_title: DEV Foncier
 edms_site_description: "Documents coming from dev-fon Sogema environment"
 edms_alfresco_folder: foncierEdmsDocuments
 
+alfresco_xms: 1g
+alfresco_xmx: 2g
+
+share_xms: 256m
+share_xmx: 512m
+
+solr_xms: 512m
+solr_xmx: 1g
+
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"

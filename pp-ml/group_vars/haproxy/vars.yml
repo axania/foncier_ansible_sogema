@@ -52,6 +52,9 @@ system_log_path: "/var/log/*.log"
 ###HAProxy
 pem_artifact: "pp-ml-foncier.sogematech.com.pem"
 
+alfresco_host: "pp-ml-fon-worker03.az.sogema.local"
+alfresco_port: "8080"
+
 keycloak_host: "dev-keycloak01.az.sogema.local"
 keycloak_port: "8080"
 

@@ -37,6 +37,15 @@ edms_site_title: QA Foncier
 edms_site_description: "Documents coming from QA Sogema environment"
 edms_alfresco_folder: foncierEdmsDocumentsQA
 
+alfresco_xms: 1g
+alfresco_xmx: 2g
+
+share_xms: 256m
+share_xmx: 512m
+
+solr_xms: 512m
+solr_xmx: 1g
+
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
