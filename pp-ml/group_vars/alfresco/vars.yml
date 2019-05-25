@@ -18,6 +18,8 @@ pull_images: yes
 
 
 #Alfresco Vars - These vars create and pre poluate
+edms_data_disk: /datadrive
+
 edms_csrf_filter_origin: https://pp-ml-foncier.sogematech.com
 
 edms_host: http://pp-ml-fon-worker03.az.sogema.local:8380
