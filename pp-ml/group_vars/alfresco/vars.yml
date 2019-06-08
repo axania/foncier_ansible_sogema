@@ -21,6 +21,7 @@ pull_images: yes
 edms_data_disk: /datadrive
 
 edms_csrf_filter_origin: https://pp-ml-foncier.sogematech.com
+edms_csrf_filter_referer: https://pp-ml-foncier.sogematech.com/.*
 
 edms_host: http://pp-ml-fon-worker03.az.sogema.local:8380
 
