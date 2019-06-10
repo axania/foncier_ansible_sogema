@@ -9,18 +9,22 @@ docker_user: "{{ vault_docker_user }}"
 docker_pwd: "{{ vault_docker_pwd }}"
 docker_email: "jenkins@sti.systems"
 
+#Docker Containers Deployed
+pull_images: no
 
 #Feature Flags
-is_swarm_mode_enabled: False
 is_datadog_on_docker: True
+is_swarm_mode_enabled: False
 is_docker_prospector_enabled: True
-pull_images: yes
-
 
 #Alfresco Vars - These vars create and pre poluate
-edms_host: http://qa-fon-worker03.az.sogema.local:8380
+alfresco_host: alfresco
+alfresco_port: 8080
 
-share_host: qa-fon-worker03.az.sogema.local
+alfresco_url: http://qa-fon-worker03.az.sogema.local:8380
+
+solr_host: alfresco-solr6
+solr_port: 8983
 
 edms_user_first_name: "Foncier"
 edms_user_last_name: "Admin"
@@ -36,6 +40,10 @@ edms_site_id: foncier
 edms_site_title: QA Foncier
 edms_site_description: "Documents coming from QA Sogema environment"
 edms_alfresco_folder: foncierEdmsDocumentsQA
+
+edms_db_host: alfresco-db
+edms_db_port: 5432
+edms_db_pass: alfresco
 
 alfresco_xms: 1g
 alfresco_xmx: 2g

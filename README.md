@@ -7,12 +7,6 @@
 * Meant to be used along with [foncier__ansible](https://bitbucket.org/ucis/foncier_ansible/) project.
 
 
-### Contents ###
-
-* DEV
-* QA
-* PP-ML
-
 ### How do I get set up? ###
 
 1. Checkout this repository.
@@ -33,5 +27,6 @@ $ ansible-playbook -i <this-repo>/<env>/inventory ≤playbook≥.yml --vault-pas
 
 ### Who do I talk to? ###
 
-* Benjamin Chambon benjamin.chambon@sogematech.com
-* Marcos Garcia marcos.garcia@sogematech.com
+* Benjamin Chambon - benjamin.chambon@sogematech.com
+* Marcos Garcia - marcos.garcia@sogematech.com
+* Sebastien Bonami - sebastien.bonami@sogematech.com
