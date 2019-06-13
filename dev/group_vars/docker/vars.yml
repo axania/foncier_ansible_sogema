@@ -102,6 +102,9 @@ drools_workbench_pass: "admin"
 
 #com.sogematech log level
 logs_level: "DEBUG"
+hibernate_show_sql: 'true'
+keycloak_logs: "DEBUG"
+spring_logs: "DEBUG"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
