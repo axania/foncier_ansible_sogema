@@ -103,6 +103,7 @@ drools_workbench_pass: "admin"
 #com.sogematech log level
 logs_level: "DEBUG"
 hibernate_show_sql: 'true'
+hibernate_logs: "INFO"
 keycloak_logs: "DEBUG"
 spring_logs: "DEBUG"
 

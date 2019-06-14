@@ -104,6 +104,7 @@ mali_folios_per_volume: "200"
 #com.sogematech log level
 logs_level: "INFO"
 hibernate_show_sql: 'true'
+hibernate_logs: "INFO"
 keycloak_logs: "INFO"
 spring_logs: "INFO"
 
