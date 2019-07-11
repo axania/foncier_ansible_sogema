@@ -108,9 +108,9 @@ keycloak_logs: "DEBUG"
 spring_logs: "DEBUG"
 
 #swagger
-swagger_username: superuser
-swagger_password: Test1234
-swagger_role: USER
+swagger_username: "superuser"
+swagger_password: "Test1234"
+swagger_role: "USER"
 
 etc_save_hosts:
     - name: "{{ ansible_ssh_host }}"
