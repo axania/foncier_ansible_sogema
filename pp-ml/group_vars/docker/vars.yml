@@ -13,7 +13,7 @@ docker_email: "jenkins@sti.systems"
 pull_images: yes #always do a docker pull > since this is dev we want to ge the latest :dev tag ;)
 foncier_ui_image_version: "0.19.0"
 foncier_api_image_version: "0.19.0"
-foncier_wf_image_version: "7.8.13-ee"
+foncier_wf_image_version: "7.8.13-ee-sogema"
 foncier_rules_api_image_version: dev
 
 #Feature Flags
