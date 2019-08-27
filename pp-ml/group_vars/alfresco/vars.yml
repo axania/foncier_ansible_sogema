@@ -50,8 +50,8 @@ edms_db_host: alfresco-db
 edms_db_port: 5432
 edms_db_pass: alfresco
 
-alfresco_xms: 6g
-alfresco_xmx: 12g
+alfresco_xms: 2g
+alfresco_xmx: 4g
 
 share_xms: 512m
 share_xmx: 1g
