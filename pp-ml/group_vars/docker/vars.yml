@@ -76,7 +76,7 @@ rules_endpoints_party_member: "transaction/type/{tranType}/version/{tranVer}/val
 
 #keycloak - environment
 keycloak_auth_server_url: "http://pp-ml-foncier.sogematech.com/auth"
-keycloak_realm: "PP-ML Foncier"
+keycloak_realm: "PP-ML-Foncier"
 keycloak_ssl_required: "external"
 
 #keycloak camunda integration
