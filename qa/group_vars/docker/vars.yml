@@ -9,7 +9,7 @@ docker_pwd: "{{ vault_docker_pwd }}"
 docker_email: "jenkins@sti.systems"
 
 #Docker Containers Deployed
-pull_images: no
+pull_images: yes
 foncier_ui_image_version: "0.20.1"
 foncier_api_image_version: "0.20.1"
 foncier_wf_image_version: "7.8.13-ee-sogema"
