@@ -6,6 +6,7 @@ worker03 ansible_ssh_host=qa-fon-worker03.az.sogema.local
 
 [docker]
 worker01
+worker02
 
 [alfresco]
 worker03
