@@ -1,0 +1,5 @@
+---
+
+vault_ansible_ssh_user: vagrant
+vault_ansible_ssh_pass: vagrant
+vault_dd_key: "nokey"

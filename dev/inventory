@@ -1,7 +1,9 @@
----
 worker01 ansible_ssh_host=dev-fon-worker01.az.sogema.local
 worker02 ansible_ssh_host=dev-fon-worker02.az.sogema.local
 worker03 ansible_ssh_host=dev-fon-worker03.az.sogema.local
+
+jasper01 ansible_ssh_host=dev-fon-jasper01.az.sogema.local
+jasper02 ansible_ssh_host=dev-fon-jasper02.az.sogema.local
 
 
 build01 ansible_ssh_host=dev-fon-build01.az.sogema.local
@@ -10,14 +12,20 @@ build01 ansible_ssh_host=dev-fon-build01.az.sogema.local
 worker01
 worker02
 
+
 [alfresco]
 worker03
+
+[jasper]
+jasper01
+jasper02
 
 [jenkins]
 build01
 
 [datacenter:children]
 docker
+jasper
 jenkins
 
 [datacenter:vars]

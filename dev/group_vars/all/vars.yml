@@ -10,6 +10,12 @@ datadog_installed: True
 dd_process_agent_enabled: True
 dd_key: "{{ vault_dd_key }}"
 
+#for docker groups
+docker_registry: "{{ vault_docker_registry }}"
+docker_user: "{{ vault_docker_user }}"
+docker_pwd: "{{ vault_docker_pwd }}"
+docker_email: "jenkins@sti.systems"
+
 #Host Timezone 
 timezone: America/Montreal
 

@@ -1,0 +1,10 @@
+---
+
+full_hostname: dev-fon-jasper02.az.sogema.local
+
+
+available_docker_services:
+  - datadog
+  - jasperserver-pro
+  - jasperserver-pro-db
+

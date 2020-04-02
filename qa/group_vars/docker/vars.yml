@@ -11,8 +11,8 @@ docker_log_driver: "journald"
 
 #Docker Containers Deployed
 pull_images: yes
-foncier_ui_image_version: "0.20.1"
-foncier_api_image_version: "0.20.1"
+foncier_ui_image_version: "0.22.0"
+foncier_api_image_version: "0.22.0"
 foncier_wf_image_version: "7.8.13-ee-sogema"
 foncier_rules_api_image_version: dev
 
@@ -38,6 +38,7 @@ api_port: 8280
 camunda_host: foncier-wf
 camunda_port: 8080
 camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
+workflow_url: http://qa-fon-worker01.az.sogema.local:8581
 
 #edms - environment - here you are using the EDMS (Alfresco or Sharepoint)
 edms_user: foncier@sogematech.com
@@ -53,6 +54,13 @@ edms_sharepoint_folder: "/Documents partages/foncierEdmsDocumentsQA"
 edms_alfresco_site: "foncier"
 edms_alfresco_folder: "/foncierEdmsDocumentsQA"
 edms_alfresco_container: "documentLibrary"
+
+#jasper - environment
+jasper_protocol: "http://"
+jasper_server: "dev-jasper-ent01.sogema.local"
+jasper_port: "8080"
+jasper_user: "{{vault_jasper_user}}"
+jasper_password: "{{vault_jasper_password}}"
 
 #mail - environment
 mail_host: "smtp.sendgrid.net"
@@ -102,7 +110,7 @@ mali_folios_per_volume: "200"
 
 #com.sogematech log level
 logs_level: "DEBUG"
-hibernate_show_sql: "true"
+hibernate_show_sql: "false"
 hibernate_logs: "INFO"
 keycloak_logs: "DEBUG"
 spring_logs: "DEBUG"
@@ -111,6 +119,7 @@ spring_logs: "DEBUG"
 swagger_username: "superuser"
 swagger_password: "Test1234"
 swagger_role: "USER"
+swagger_enable: "true"
 
 etc_save_hosts:
   - name: "{{ ansible_ssh_host }}"
@@ -136,3 +145,13 @@ docker_conatiner_log_name: "fon"
 
 #System logs filebeat vars:
 system_log_path: "/var/log/*.log"
+
+#Sigtas services
+sigtas_baseurl: "http://qa-ml-sig-worker01.az.sogema.local:9767/services"
+
+#Sigtas UI
+sigtas_ui_domain: http://dep-sti-sig3app02:8080/
+sigtas_ui_path: fonmldev/
+
+#User Guides
+user_guide_url: "http://dev-sig-docs01.eastus2.cloudapp.azure.com/fr/agent_guide"

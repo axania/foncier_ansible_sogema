@@ -1,0 +1,8 @@
+
+install_directory: /u01/TIBCO/TDV
+server_port: 9400
+repository_admin_password: "{{ vault_repository_admin_password }}"
+database_admin_password: "{{ vault_database_admin_password }}"
+server_admin_password: "{{ vault_server_admin_password }}"
+encryption_password: "{{ vault_encryption_password }}"
+unique_Id: 6a715917b145d5758a002dd3c056e5bc

@@ -1,0 +1,9 @@
+---
+
+full_hostname: pp-ml-fon-tdv01.az.sogema.local
+
+available_docker_services:
+  - datadog
+  - jasperserver-pro
+  - jasperserver-pro-db
+

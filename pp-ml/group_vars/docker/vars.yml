@@ -1,5 +1,4 @@
 ---
-
 #Docker Installed version
 docker_compose_version: 1.21.2
 docker_ce_version: 18.03.1~ce-0~ubuntu
@@ -12,8 +11,8 @@ docker_log_driver: "journald"
 
 #Docker Containers Deployed
 pull_images: yes #always do a docker pull > since this is dev we want to ge the latest :dev tag ;)
-foncier_ui_image_version: "dev"
-foncier_api_image_version: "dev"
+foncier_ui_image_version: "0.22.0"
+foncier_api_image_version: "0.22.0"
 foncier_wf_image_version: "7.8.13-ee-sogema"
 foncier_rules_api_image_version: dev
 
@@ -39,21 +38,29 @@ api_port: 8280
 camunda_host: foncier-wf
 camunda_port: 8080
 camunda_enginerest_url: http://foncier-ui:4200/workflowApi/engine-rest/
+workflow_url: http://pp-ml-fon-worker01.az.sogema.local:8581
 
 #edms - environment
 edms_user: "foncier@sogematech.com"
 edms_password: "{{ vault_edms_password }}"
 edms_domain: "pp-ml-fon-worker03.az.sogema.local:8380"
 edms_source: "ALFRESCO"
-edms_enabled: 'true'
+edms_enabled: "true"
 edms_temp_file_directory: "src/main/resources/tempFiles"
-edms_server_base_folder: "/sites/dev.foncier/Documents partages/foncierEdmsDocuments"
+edms_server_base_folder: "/sites/foncier/documentLibrary/foncierEdmsDocumentsPPML"
 edms_sharepoint_site: "/sites/dev.foncier"
 edms_sharepoint_folder: "/Documents partages/foncierEdmsDocuments"
 edms_microsoft_sts_url: "https://login.microsoftonline.com/extSTS.srf"
 edms_alfresco_site: "foncier"
 edms_alfresco_folder: "/foncierEdmsDocumentsPPML"
 edms_alfresco_container: "documentLibrary"
+
+#jasper - environment
+jasper_protocol: "http://"
+jasper_server: "pp-ml-fon-jasper01.az.sogema.local"
+jasper_port: "8080"
+jasper_user: "{{vault_jasper_user}}"
+jasper_password: "{{vault_jasper_password}}"
 
 #mail - environment
 mail_host: "smtp.gmail.com"
@@ -63,7 +70,7 @@ mail_username: "sti.foncier@gmail.com"
 mail_password: "{{ vault_mail_password }}"
 mail_protocol: "smtp"
 mail_defaultencoding: "UTF-8"
-mail_smtp_auth_enabled: 'true'
+mail_smtp_auth_enabled: "true"
 mail_tls_enabled: "true"
 mail_debug: "false"
 
@@ -82,7 +89,7 @@ keycloak_ssl_required: "external"
 
 #keycloak camunda integration
 keycloak_wf_client: "foncier-camunda"
-keycloak_wf_realm_public_key: "{{ vault_keycloak_wf_realm_public_key }}" 
+keycloak_wf_realm_public_key: "{{ vault_keycloak_wf_realm_public_key }}"
 
 #keycloak foncier api integration
 keycloak_api_client: "foncier-api"
@@ -103,7 +110,7 @@ drools_workbench_pass: "admin"
 
 #com.sogematech log level
 logs_level: "DEBUG"
-hibernate_show_sql: 'true'
+hibernate_show_sql: "true"
 hibernate_logs: "INFO"
 keycloak_logs: "DEBUG"
 spring_logs: "DEBUG"
@@ -112,17 +119,18 @@ spring_logs: "DEBUG"
 swagger_username: "superuser"
 swagger_password: "Test1234"
 swagger_role: "USER"
+swagger_enable: "false"
 
 etc_save_hosts:
-    - name: "{{ ansible_ssh_host }}"
-      ip: 127.0.0.1
+  - name: "{{ ansible_ssh_host }}"
+    ip: 127.0.0.1
 
 # /etc/resolv.conf values
 dns_resolv_searchpath:
-  - 'az.sogema.local'
-  - 'sogema.local' 
-  - 'sogema.ca'
-  - 'reddog.microsoft.com'
+  - "az.sogema.local"
+  - "sogema.local"
+  - "sogema.ca"
+  - "reddog.microsoft.com"
 
 dns_server_list:
   - 192.168.0.70
@@ -131,10 +139,19 @@ dns_server_list:
   - 8.8.4.4
   - 208.67.222.222
 
-
 #Docker logs filebeat vars
 docker_log_path: "/var/lib/docker/containers/*/*.log"
 docker_conatiner_log_name: "fon"
 
 #System logs filebeat vars:
 system_log_path: "/var/log/*.log"
+
+#Sigtas services
+sigtas_baseurl: "http://pp-ml-sig-worker01.az.sogema.local:9767/services"
+
+#Sigtas UI
+sigtas_ui_domain: http://prd-sogema-sig3app.sogema.local:8080/
+sigtas_ui_path: eldmlipr/
+
+#User Guides
+user_guide_url: "http://dev-sig-docs01.eastus2.cloudapp.azure.com/fr/agent_guide"
